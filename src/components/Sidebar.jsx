@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { RiBarChartGroupedFill, RiEarthFill, RiMessage2Line, RiCalendar2Line, RiLogoutBoxRLine, RiArrowRightCircleLine} from "react-icons/ri";
+import { MdSupportAgent } from "react-icons/md";
 
 const Sidebar = () => {
     const [showSubmenu, setShowSubmenu] = useState(false);
@@ -47,6 +48,11 @@ const Sidebar = () => {
                             <li>
                                 <Link to="/" className='flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-200 transition-colors'>
                                     <RiMessage2Line /> Messages
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/" className='flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-200 transition-colors'>
+                                    <MdSupportAgent /> Technical Support
                                 </Link>
                             </li>
                             <li>
