@@ -72,7 +72,7 @@ const Header = () => {
           </MenuButton>
         } transition menuClassName="bg-secondary-300">
           <MenuItem className="p-0 hover:bg-transparent">
-            <Link to="/perfil" className='rounded-lg transition-colors hover:bg-secondary-100 flex items-center gap-x-4 py-2 px-6 flex-1'>
+            <Link to="/profile" className='rounded-lg transition-colors hover:bg-secondary-100 flex items-center gap-x-4 py-2 px-6 flex-1'>
               <img src="https://img.freepik.com/foto-gratis/hombre-toca-primer-plano-guitarra-acustica_169016-20618.jpg" alt="Guitar Player" className='w-10 h-10  object-cover rounded-full' />
               <div className='flex flex-col gap-1 text-sm'>
                 <span className='text-sm'>Marciano García</span>

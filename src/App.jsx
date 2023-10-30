@@ -7,6 +7,7 @@ import Login from './routes/auth/Login';
 import Register from "./routes/auth/Register";
 //Routes Admin
 import Home from "./routes/admin/Home";
+import Profile from "./routes/admin/Profile";
 import Error404 from './routes/Error404';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         </Route>
         <Route path="/" element={<LayoutAdmin />}>
           <Route index element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
         </Route>
         <Route path="*" element={<Error404 />} />
       </Routes>
