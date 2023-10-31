@@ -50,7 +50,7 @@ const Sidebar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/" className='flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-200 transition-colors'>
+                                <Link to="/tickets" className='flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-200 transition-colors'>
                                     <RiCustomerServiceFill /> Technical Support
                                 </Link>
                             </li>
