@@ -6,7 +6,8 @@ import LayoutAuth from "./layouts/LayoutAuth";
 import Login from './routes/auth/Login';
 import Register from "./routes/auth/Register";
 //Routes Admin
-import Home from "./routes/admin/Home";
+// import Home from "./routes/admin/Home";
+import HomeP from "./routes/admin/HomePrueba";
 import Profile from "./routes/admin/Profile";
 import Error404 from './routes/Error404';
 import Tickets from "./routes/admin/Tickets";
@@ -21,7 +22,7 @@ function App() {
           <Route path="register" element={<Register />} />
         </Route>
         <Route path="/" element={<LayoutAdmin />}>
-          <Route index element={<Home />} />
+          <Route index element={<HomeP />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/tickets" element={<Tickets />} />
         </Route>
