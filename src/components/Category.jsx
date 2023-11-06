@@ -273,7 +273,7 @@ const Category = () => {
                                     Servicios
                                 </h2>
                                 <div>
-                                    Total: {`${gallery.length}`}
+                                    Total: {`${product.length}`}
                                 </div>
                             </Tab>
                         </div>
@@ -283,6 +283,9 @@ const Category = () => {
                     <Tab.Panel>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                             <div className='bg-secondary-100 p-8 rounded-lg'>
+                            <div className='flex items-center justify-between'>
+                                    <h1 className='text-xl'>Categorías</h1>
+                                </div>
                                 {/* Content card */}
                                 <div>
                                     {cat.map((cat, i) => (<div key={i}>
@@ -290,11 +293,11 @@ const Category = () => {
                                             <Disclosure.Button className="py-2 text-lg flex items-center gap-4" >
                                                 <RiArrowRightSLine className="ui-open:rotate-90 ui-open:transform transition-all" /> Categoría {i + 1}
                                             </Disclosure.Button>
-                                            <Disclosure.Panel className="text-gray-800 text-sm px-8">
-                                                <div>
+                                            <Disclosure.Panel className="text-gray-800 hover:text-black text-sm px-8">
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Nombre: {cat.name}
                                                 </div>
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     ID: {cat.id}
                                                 </div>
                                             </Disclosure.Panel>
@@ -303,6 +306,9 @@ const Category = () => {
                                 </div>
                             </div>
                             <div className='bg-secondary-100 p-8 rounded-lg'>
+                                <div className='flex items-center justify-between'>
+                                    <h1 className='text-xl'>Subcategorías</h1>
+                                </div>
                                 {/* Content card */}
                                 <div>
                                     {subcat.map((subcat, i) => (<div key={i}>
@@ -310,14 +316,14 @@ const Category = () => {
                                             <Disclosure.Button className="py-2 text-lg flex items-center gap-4" >
                                                 <RiArrowRightSLine className="ui-open:rotate-90 ui-open:transform transition-all" /> Subcategoría {i + 1}
                                             </Disclosure.Button>
-                                            <Disclosure.Panel className="text-gray-800 text-sm px-8">
-                                                <div>
-                                                    ID: {subcat.id}
-                                                </div>
-                                                <div>
+                                            <Disclosure.Panel className="text-gray-800 hover:text-black text-sm px-8">
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Nombre: {subcat.name}
                                                 </div>
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
+                                                    ID: {subcat.id}
+                                                </div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors text-justify'>
                                                     Descripción: {subcat.description}
                                                 </div>
                                                 <div>
@@ -334,9 +340,6 @@ const Category = () => {
                                                         </MenuItem>
                                                     </Menu>
                                                 </div>
-                                                <div>
-                                                    <img src={`${subcat.imageSubcategory}`} alt="support" className='w-72 h-72 object-cover' />
-                                                </div>
                                             </Disclosure.Panel>
                                         </Disclosure>
                                     </div>))}
@@ -347,6 +350,9 @@ const Category = () => {
                     <Tab.Panel>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                             <div className='bg-secondary-100 p-8 rounded-lg'>
+                                <div className='flex items-center justify-between'>
+                                    <h1 className='text-xl'>Tipo de Precio</h1>
+                                </div>
                                 {/* Content card */}
                                 <div>
                                     {pp.map((pp, i) => (<div key={i}>
@@ -354,11 +360,11 @@ const Category = () => {
                                             <Disclosure.Button className="py-2 text-lg flex items-center gap-4" >
                                                 <RiArrowRightSLine className="ui-open:rotate-90 ui-open:transform transition-all" /> Tipo de Precio {i + 1}
                                             </Disclosure.Button>
-                                            <Disclosure.Panel className="text-gray-800 text-sm px-8">
-                                                <div>
+                                            <Disclosure.Panel className="text-gray-800 hover:text-black text-sm px-8">
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Nombre: {pp.name}
                                                 </div>
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     ID: {pp.id}
                                                 </div>
                                             </Disclosure.Panel>
@@ -372,6 +378,9 @@ const Category = () => {
                     <Tab.Panel>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                             <div className='bg-secondary-100 p-8 rounded-lg'>
+                                <div className='flex items-center justify-between'>
+                                    <h1 className='text-xl'>Producciones</h1>
+                                </div>
                                 <div>
                                     {lp.map((lp, i) => (<div key={i}>
                                         <Disclosure>
@@ -379,17 +388,17 @@ const Category = () => {
                                                 <RiArrowRightSLine className="ui-open:rotate-90 ui-open:transform transition-all" /> Producción {i + 1}
                                             </Disclosure.Button>
                                             <Disclosure.Panel className="text-gray-800 text-sm px-8">
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     ID: {lp.id}
                                                 </div>
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Nombre de la producción: {lp.songTitle}
                                                 </div>
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Nombre del artista: {lp.artistName}
                                                 </div>
-                                                <div>
-                                                    <iframe src={`${lp.youtubeUrl}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen ></iframe>
+                                                <div className='p-2'>
+                                                    <iframe src={`${lp.youtubeUrl}`} allowFullScreen className='rounded-lg w-62 h-62'></iframe>
                                                 </div>
                                             </Disclosure.Panel>
                                         </Disclosure>
@@ -401,14 +410,16 @@ const Category = () => {
                                 <div className='flex items-center justify-between'>
                                     <h1 className='text-xl'>Última Producción Agregada</h1>
                                 </div>
-                                <div>
-                                    ID: {lastProductionDB.id}
-                                </div>
-                                <div>
-                                    Nombre: {lastProductionDB.songTitle}
-                                </div>
-                                <div>
-                                    <iframe src={`${lastProductionDB.youtubeUrl}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen ></iframe>
+                                <div className='text-gray-800 hover:text-black'>
+                                    <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
+                                        ID: {lastProductionDB.id}
+                                    </div>
+                                    <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
+                                        Nombre: {lastProductionDB.songTitle}
+                                    </div>
+                                    <div className='p-2'>
+                                        <iframe src={`${lastProductionDB.youtubeUrl}`} allowFullScreen className='rounded-lg w-62 h-62'></iframe>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -416,6 +427,9 @@ const Category = () => {
                     <Tab.Panel>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                             <div className='bg-secondary-100 p-8 rounded-lg'>
+                                <div className='flex items-center justify-between'>
+                                    <h1 className='text-xl'>Miembros</h1>
+                                </div>
                                 {/* Content card */}
                                 <div>
                                     {mm.map((mm, i) => (<div key={i}>
@@ -424,23 +438,23 @@ const Category = () => {
                                                 <RiArrowRightSLine className="ui-open:rotate-90 ui-open:transform transition-all" /> Miembro {i + 1}
                                             </Disclosure.Button>
                                             <Disclosure.Panel className="text-gray-800 text-sm px-8">
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     ID: {mm.id}
                                                 </div>
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Nombre: {mm.name}
                                                 </div>
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Cargo: {mm.jobTitle}
                                                 </div>
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Username:{" "}
                                                     <Link to={`${mm.instagramUrl}`}>
                                                         {mm.instagramName}
                                                     </Link>
                                                 </div>
                                                 <div>
-                                                    <img src={`${mm.imageProfile}`} alt="support" className='w-72 h-72 object-cover' />
+                                                    <img src={`${mm.imageProfile}`} alt="support" className='w-44 h-44 object-cover rounded-full' />
                                                 </div>
                                             </Disclosure.Panel>
                                         </Disclosure>
@@ -448,6 +462,9 @@ const Category = () => {
                                 </div>
                             </div>
                             <div className='bg-secondary-100 p-8 rounded-lg'>
+                                <div className='flex items-center justify-between'>
+                                    <h1 className='text-xl'>Usuarios</h1>
+                                </div>
                                 {/* Content card */}
                                 <div>
                                     {user.map((user, i) => (<div key={i}>
@@ -455,21 +472,21 @@ const Category = () => {
                                             <Disclosure.Button className="py-2 text-lg flex items-center gap-4" >
                                                 <RiArrowRightSLine className="ui-open:rotate-90 ui-open:transform transition-all" /> Usuario {i + 1}
                                             </Disclosure.Button>
-                                            <Disclosure.Panel className="text-gray-800 text-sm px-8">
-                                                <div>
+                                            <Disclosure.Panel className="text-gray-800 hover:text-black text-sm px-8">
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     ID: {user.id}
                                                 </div>
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Nombre: {user.name}{" "}{user.lastName}
                                                 </div>
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Username: {user.userName}
                                                 </div>
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Email: {user.email}
                                                 </div>
                                                 <div>
-                                                    <img src={`${user.imageProfile}`} alt="support" className='w-72 h-72 object-cover' />
+                                                    <img src={`${user.imageProfile}`} alt="support" className='w-44 h-44 object-cover rounded-full' />
                                                 </div>
                                             </Disclosure.Panel>
                                         </Disclosure>
@@ -481,21 +498,24 @@ const Category = () => {
                     <Tab.Panel>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                             <div className='bg-secondary-100 p-8 rounded-lg'>
+                                <div className='flex items-center justify-between'>
+                                    <h1 className='text-xl'>Galería</h1>
+                                </div>
                                 <div>
                                     {gallery.map((gallery, i) => (<div key={i}>
                                         <Disclosure>
                                             <Disclosure.Button className="py-2 text-lg flex items-center gap-4" >
                                                 <RiArrowRightSLine className="ui-open:rotate-90 ui-open:transform transition-all" /> Foto {i + 1}
                                             </Disclosure.Button>
-                                            <Disclosure.Panel className="text-gray-800 text-sm px-8">
-                                                <div>
+                                            <Disclosure.Panel className="text-gray-800 hover:text-black text-sm px-8">
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     ID: {gallery.id}
                                                 </div>
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Nombre: {gallery.name}
                                                 </div>
                                                 <div>
-                                                    <img src={`${gallery.image}`} alt="support" className='w-72 h-72 object-cover' />
+                                                    <img src={`${gallery.image}`} alt="support" className='w-72 h-72 object-cover rounded-lg' />
                                                 </div>
                                             </Disclosure.Panel>
                                         </Disclosure>
@@ -507,14 +527,14 @@ const Category = () => {
                                 <div className='flex items-center justify-between'>
                                     <h1 className='text-xl'>Última Imagen Agregada</h1>
                                 </div>
-                                <div>
+                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                     ID: {lastGalleryDB.id}
                                 </div>
-                                <div>
+                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                     Nombre: {lastGalleryDB.name}
                                 </div>
                                 <div>
-                                    <img src={`${lastGalleryDB.image}`} alt="support" className='w-72 h-72 object-cover' />
+                                    <img src={`${lastGalleryDB.image}`} alt="support" className='w-80 h-80 object-cover rounded-lg' />
                                 </div>
                             </div>
                         </div>
@@ -522,24 +542,27 @@ const Category = () => {
                     <Tab.Panel>
                         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                             <div className='bg-secondary-100 p-8 rounded-lg'>
+                                <div className='flex items-center justify-between'>
+                                    <h1 className='text-xl'>Servicios</h1>
+                                </div>
                                 <div>
                                     {product.map((product, i) => (<div key={i}>
                                         <Disclosure>
                                             <Disclosure.Button className="py-2 text-lg flex items-center gap-4" >
                                                 <RiArrowRightSLine className="ui-open:rotate-90 ui-open:transform transition-all" /> Servicio {i + 1}
                                             </Disclosure.Button>
-                                            <Disclosure.Panel className="text-gray-800 text-sm px-8">
-                                                <div>
+                                            <Disclosure.Panel className="text-gray-800 hover:text-black text-sm px-8 m">
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     ID: {product.id}
                                                 </div>
-                                                <div>
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Nombre: {product.name}
                                                 </div>
-                                                <div>
-                                                    descripción: {product.description}
+                                                <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors text-justify'>
+                                                    Descripción: {product.description}
                                                 </div>
                                                 <div>
-                                                    <img src={`${product.imageProduct}`} alt="support" className='w-72 h-72 object-cover' />
+                                                    <img src={`${product.imageProduct}`} alt="support" className='w-50 h-50 object-cover rounded-lg' />
                                                 </div>
                                                 <div>
                                                     <Menu menuButton={
@@ -549,13 +572,8 @@ const Category = () => {
                                                     } transition menuClassName="bg-secondary-300">
                                                         <MenuItem className="p-0 hover:bg-transparent">
                                                             <div className='rounded-lg transition-colors hover:bg-secondary-100 flex items-center gap-x-4 py-2 px-6 flex-1'>
-                                                                Precio: {product.price} <br />
+                                                                Precio: {product.price} USD <br />
                                                                 Tipo: {product.PriceType.name}
-                                                            </div>
-                                                        </MenuItem>
-                                                        <MenuItem className="p-0 hover:bg-transparent">
-                                                            <div className='rounded-lg transition-colors hover:bg-secondary-100 flex items-center gap-x-4 py-2 px-6 flex-1'>
-                                                                Categoría: {product.category.name}
                                                             </div>
                                                         </MenuItem>
                                                         <MenuItem className="p-0 hover:bg-transparent">
@@ -564,7 +582,7 @@ const Category = () => {
                                                             </div>
                                                         </MenuItem>
                                                     </Menu>
-                                                </div>                                            
+                                                </div>
                                             </Disclosure.Panel>
                                         </Disclosure>
                                     </div>))}
@@ -575,23 +593,23 @@ const Category = () => {
                                 <div className='flex items-center justify-between'>
                                     <h1 className='text-xl'>Último Servicio Agregado</h1>
                                 </div>
-                                <div>
+                                <div className='text-gray-800 hover:text-black hover:bg-secondary-200/60 px-2 rounded-lg transition-colors text-justify'>
                                     ID: {lastProductDB.id}
                                 </div>
-                                <div>
+                                <div className='text-gray-800 hover:text-black hover:bg-secondary-200/60 px-2 rounded-lg transition-colors text-justify mb-2'>
                                     Nombre: {lastProductDB.name}
                                 </div>
                                 <div>
-                                    <img src={`${lastProductDB.image}`} alt="support" className='w-72 h-72 object-cover' />
+                                    <img src={`${lastProductDB.image}`} alt="support" className='w-72 h-72 object-cover rounded-lg' />
                                 </div>
                             </div>
                             <div className='bg-secondary-100 p-8 rounded-lg'>
                                 <h1 className='text-2xl mb-8'>Productos por Subcategorías</h1>
                                 <div>{countSubcat.map((countSubcat, i) => (<div key={i}>
-                                    <div className='flex items-center gap-4 mb-4'>
+                                    <div className='flex items-center gap-4 hover:bg-secondary-200/60 py-2 px-4 rounded-lg transition-colors'>
                                         <div className='flex flex-col gal-1'>
-                                            <h5>Instrumentos</h5>
-                                            <p className='text-xs'>Total: {countSubcat.Instrumentos}</p>
+                                            <h5>{countSubcat.subCatName}</h5>
+                                            <p className='text-xs'>Total: {countSubcat.countbySubCat}</p>
                                         </div>
                                     </div>
                                 </div>))}
