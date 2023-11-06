@@ -480,7 +480,7 @@ const Category = () => {
                                                     Nombre: {user.name}{" "}{user.lastName}
                                                 </div>
                                                 <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
-                                                    Username: {user.userName}
+                                                    Alias: {user.userName}
                                                 </div>
                                                 <div className='hover:bg-secondary-200/60 px-2 py-1 rounded-lg transition-colors'>
                                                     Email: {user.email}
@@ -604,7 +604,7 @@ const Category = () => {
                                 </div>
                             </div>
                             <div className='bg-secondary-100 p-8 rounded-lg'>
-                                <h1 className='text-2xl mb-8'>Productos por Subcategorías</h1>
+                                <h1 className='text-2xl mb-8'>Servicios por Subcategorías</h1>
                                 <div>{countSubcat.map((countSubcat, i) => (<div key={i}>
                                     <div className='flex items-center gap-4 hover:bg-secondary-200/60 py-2 px-4 rounded-lg transition-colors'>
                                         <div className='flex flex-col gal-1'>
