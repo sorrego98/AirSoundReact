@@ -454,7 +454,7 @@ const Category = () => {
                                                     </Link>
                                                 </div>
                                                 <div>
-                                                    <img src={`${mm.imageProfile}`} alt="support" className='w-44 h-44 object-cover rounded-full' />
+                                                    <img src={`${mm.image}`} alt="support" className='w-44 h-44 object-cover rounded-full' />
                                                 </div>
                                             </Disclosure.Panel>
                                         </Disclosure>
@@ -486,7 +486,7 @@ const Category = () => {
                                                     Email: {user.email}
                                                 </div>
                                                 <div>
-                                                    <img src={`${user.imageProfile}`} alt="support" className='w-44 h-44 object-cover rounded-full' />
+                                                    <img src={`${user.image}`} alt="support" className='w-44 h-44 object-cover rounded-full' />
                                                 </div>
                                             </Disclosure.Panel>
                                         </Disclosure>
